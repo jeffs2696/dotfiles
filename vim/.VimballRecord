@@ -1,0 +1,1 @@
+amsmath.vim: call delete('/home/jeff-severino/.vim/after/syntax/tex/amsmath.vim')
