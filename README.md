@@ -87,7 +87,7 @@ Each plugin is sensitive to where you are and what you're doing, they reveal the
 ## [Vim](<https://en.wikipedia.org/wiki/Vim_(text_editor)>)
 
 - Leader key has been remapped to `,`
-
+- note that you can only source your .vimrc files from within vim
 ## [Tmux](https://en.wikipedia.org/wiki/Tmux)
 
 - Ctrl-B has been remapped to the backtick character (&#96;). If you want to type the actual backtick character (&#96;) itself, just hit the key twice.

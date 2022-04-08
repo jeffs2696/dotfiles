@@ -1,6 +1,3 @@
-" Jeff's .vimrc configuration
-
-" General Vim Settings
 
 " enable syntax and plugins (for netrw)
 :filetype plugin indent on
@@ -106,66 +103,6 @@ vnoremap <Space> zf
 :nnoremap <c-k> <c-w>k
 :nnoremap <c-h> <c-w>h
 :nnoremap <c-l> <c-w>l
-call plug#begin('~/.vim/plugged')
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'arcticicestudio/nord-vim'
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-Plug 'sirver/ultisnips'
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
-Plug 'lervag/vimtex'
-let g:tex_flavor='latex'
-let g:vimtex_view_method='general'
-let g:vimtex_quickfix_mode=0
-
-Plug 'KeitaNakamura/tex-conceal.vim'
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
-setlocal spell
-set spelllang=en_us
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>
-Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-latex/vim-latex'
-Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
-Plug 'vim-utils/vim-man'
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'https://github.com/wikitopian/hardmode'
-" A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' 
-call plug#end()
-
-:colorscheme gruvbox 
-:let g:airline_theme='gruvbox'
-" transparent background
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-if exists('+termguicolors')
-      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-      set termguicolors
-    endif
-
-:set background=light
-
-" NERDTree configuration
-map <C-H> :NERDTreeToggle<CR>
-
-" nnoremap gob  :s/\((\zs\\|,\ *\zs\\|)\)/\r&/g<CR><Bar>:'[,']normal ==<CR>
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-"TAG JUMPING:
-
-" Create the `tags` file (may need to install ctags first)
-command! MakeTags !ctags -R .
-set tags=./tags,tags;$HOME
-" NOW WE CAN:
-" - Use ^] to jump to tag under cursor
-" - Use g^] for ambiguous tags
-" - Use ^t to jump back up the tag stack
+" clears screen after closing vim to save my neck
+au VimLeave * :!clear
