@@ -54,7 +54,7 @@
 " remove silly .swp files, replace with undodir
 :set noswapfile
 :set nobackup
-:set undodir=~/.vim/undodir
+:set undodir=~/dotfiles/vim/undodir
 :set undofile
 
  " enhance searches by going to search word 
